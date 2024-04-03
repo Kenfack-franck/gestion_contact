@@ -1,0 +1,49 @@
+#### CREATION DE LA BD ####
+
+
+//* creation table Agent *//
+
+CREATE TABLE `Agent` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `Salaire` int NOT NULL,
+  `Statut` varchar(20) NOT NULL,
+  `Categorie` varchar(20) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL,
+  `ind_sal` int NOT NULL,
+  `occupation` varchar(20) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL,
+  `code` varchar(50) NOT NULL,
+  `nom` varchar(50) NOT NULL,
+  `date_de_naissance` varchar(50) NOT NULL,
+  `address` varchar(50) NOT NULL,
+  `email` varchar(50) NOT NULL,
+  `telNumber` int NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=17 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci
+
+
+//* creation table Enseignant *//
+
+CREATE TABLE `Enseignant` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `code` int NOT NULL,
+  `nom` varchar(50) NOT NULL,
+  `date` varchar(50) NOT NULL,
+  `address` varchar(50) NOT NULL,
+  `email` varchar(50) NOT NULL,
+  `numero` int NOT NULL,
+  `statut` varchar(50) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci
+
+//* creation table Etudiant *//
+CREATE TABLE `Etudiant` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `code` int NOT NULL,
+  `nom` varchar(50) NOT NULL,
+  `date_naissance` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
+  `address` varchar(50) NOT NULL,
+  `email` varchar(50) NOT NULL,
+  `telNumber` int NOT NULL,
+  `cycle` varchar(60) NOT NULL,
+  `niveau` int NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci
